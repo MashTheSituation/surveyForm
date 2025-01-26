@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mash's Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="header" id="title">Mash's Survey Form</h1>
+      <p class="p-header" id="description">Thank you for joining our survey about Mash The Situation</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <div class="container">
+          <fieldset>
+            <div>
+              <label class="bold" for="name" id="name-label">Username:</label>
+              <input class="name" id="name" type="text" placeholder="name" required/>
+              <label class="bold" for="email" id="email-label">Email:</label>
+              <input class="email" id="email" type="email" placeholder="email" required/>
+              <label class="bold" for="number" id="number-label">Age:</label>
+              <input class="number" id="number" type="number" min="18" max="60" placeholder="18"/>
+              <label class="bold" for="dropdown" id="gender-label">Gender:</label>
+              <select id="dropdown">
+                <option value="" disabled selected>Select:</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <label class="bold" for="relationship">What's your relationship with Mash?</label>
+              <div class="relationship">
+                <label><input name="relationship" value="family" type="radio"/> Family</label>
+                <label><input name="relationship" value="friend" type="radio"/> Friend</label>
+              </div>
+              <label class="bold" for="funthings">What does Mash enjoy doing? (select only 4)</label>
+              <div class="enjoy">
+                <label><input value="soccer" type="checkbox" onchange="limitCheckboxSelection(this)" /> Playing soccer</label>
+                <label><input value="games" type="checkbox" onchange="limitCheckboxSelection(this)" /> Playing video-games</label>
+                <label><input value="tv" type="checkbox" onchange="limitCheckboxSelection(this)" /> Watching TV</label>
+                <label><input value="coding" type="checkbox" onchange="limitCheckboxSelection(this)" /> Coding</label>
+                <label><input value="dogwalk" type="checkbox" onchange="limitCheckboxSelection(this)" /> Dog Walking</label>
+                <label><input value="alcohol" type="checkbox" onchange="limitCheckboxSelection(this)" /> Drinking Alcohol</label>
+                <label><input value="blunt" type="checkbox" onchange="limitCheckboxSelection(this)" /> Having a blunt</label>
+                <label><input value="partying" type="checkbox" onchange="limitCheckboxSelection(this)" /> Partying</label>
+              </div>
+              <label class="bold" for="share" id="memories">What memories of you & Mash can you share with us?</label>
+              <textarea id="share" name="share" rows="5" cols="40" placeholder="share here..."></textarea>
+              <div class="button">
+                <input class="submit" id="submit" type="submit" value="SUBMIT"/>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
